@@ -1,0 +1,141 @@
+.margin-body {
+    margin-top: 150px;
+    margin-left: 99px;
+}
+.margin-hand-left {
+    margin-top: 150px;
+}
+/*----------------------BODY----------------------*/
+.head {
+    position: absolute;
+    top: 61%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transform: perspective(1000px) rotateX(40deg);
+}
+.body-conteiner {
+    position: absolute;
+    top: 8.5%;
+    left: 8%;
+    transform: rotate(90deg);
+}
+.body {
+  display: inline-block;
+  width: 200px;
+  height: 125px;
+  border: 2px solid black;
+  transform: perspective(500px) rotateY(40deg);
+}
+/*----------------------HANDS----------------------*/
+.right-hand-conteiner {
+    margin-left: 6px;
+}
+
+.left-hand-conteiner {
+    margin-left:250px;
+}
+
+.hand {
+    display: inline-block;
+    position: absolute;
+    background: black;
+    width: 2px;
+}
+
+.hand-top {
+    height: 110px;
+    animation: top-hand-move 525ms linear alternate infinite;
+}
+
+.hand-bottom {
+    top: 110px;
+    height: 35px;
+    transform-origin: 0 0;
+    animation: bottom-hand-move 1.05s infinite;
+    animation-delay: 0.25s;
+}
+
+.left-hand {
+    animation-delay: 305ms;
+    animation-direction: reverse;
+}
+/*----------------------BALLS----------------------*/
+.balls-conteiner {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+.conteiner {
+    position: relative;
+    width: 65px;
+    height: 290px;
+    float: left;
+}
+
+.block1 {
+    margin-left: 55px;
+}
+
+.block2 {
+    margin-left: 80px;
+}
+
+.ball {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    animation: ballsmove 2.1s linear infinite;
+}
+
+.ball2 {
+    animation-delay: 1.05s;
+}
+
+.ball3 {
+    animation-delay: 525ms;
+    animation-direction: reverse;
+}
+
+.ball4{
+    animation-delay: 1.575s;
+    animation-direction: reverse;
+}
+
+@keyframes top-hand-move{
+    0% {transform: skewX(4deg);
+    transform-origin: 0px 0px;}
+    100% {transform: skewX(-4deg);
+    transform-origin: 0px 0px;}
+}
+
+@keyframes bottom-hand-move {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+@keyframes ballsmove {
+    0%{top: 0px; left: 0px;}
+    10%{top: 2.5%; left: -8%;}
+    33%{top: 83%; left: -50%}
+    37%{top: 90%; left: -45%;}
+    42%{top: 97%; left: -15%;}
+    46%{top: 98%; left: -10%;}
+    50%{top: 100%;}
+    54%{top: 98%; left: 10%;}
+    59%{top: 97%; left: 15%;}
+    63%{top: 90%; left: 45%;}
+    72%{top: 83%; left: 50%}
+    90%{top: 2.5%; left: 8%;}
+    100%{top: 0px; left: 0px;}
+}
+
+
+
+
+
